@@ -11,7 +11,8 @@ options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=options)
 driver.maximize_window()
 
-driver.get('http://172.188.18.251:8060/telemetry/installs')
+url = "http://"
+driver.get(url)
 
 WebDriverWait(driver, 30).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, ".v-list-item.v-list-item--link:not(.drawer)")))
 
